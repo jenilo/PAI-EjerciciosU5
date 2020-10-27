@@ -1,0 +1,38 @@
+[
+	{
+		"title" : "Misery",
+		"description" : "Un escritor sufre un grave accidente y recobra el conocimiento en una apartada casa en la que vive una misteriosa mujer, corpulenta y de extraño carácter. Se trata de una antigua enfermera, involucrada en varias muertes misteriosas ocurridas en diversos hospitales. Esta mujer es capaz de los mayores horrores, y el escritor, con las piernas rotas y entre terribles dolores, tiene que luchar por su vida.",
+		"year" : 1980,
+		"pages" : 200,
+		"isbn" : "9788497595353",
+		"editorial" : "Planeta",
+		"edition" : 1,
+		"autor" : "Stephen King",
+		"cover" : "book.png",
+		"category_id": 4
+	},
+	{
+		"title" : "El marciano",
+		"description" : "Seis días atrás el astronauta Mark Watney se convirtió en uno de los primeros hombres en caminar por la superficie de Marte. Ahora está seguro de que será el primer hombre en morir allí. La tripulación de la nave en que viajaba se ve obligada a evacuar el planeta a causa de una tormenta de polvo, dejando atrás a Mark tras darlo por muerto. Pero él está vivo, y atrapado a millones de kilómetros de cualquier ser humano, sin posibilidad de enviar señales a la Tierra.",
+		"year" : 2013,
+		"pages" : 408,
+		"isbn" : "9788466655057",
+		"editorial" : "Penguin Random House",
+		"edition" : 1,
+		"autor" : "Andy Weir",
+		"cover" : "book.png",
+		"category_id": 5
+	},
+	{
+		"title" : "Las aventuras de Tom Sawyer",
+		"description" : "Alguien ha dicho que Las aventuras de Tom Sawyer es, ante todo, un libro de memorias. Y, en efecto, el relato de las cosas que le suceden a Tom Sawyer en esa pequeña ciudad a orillas del Mississippi bien puede ser una rememoración de la niñez de Mark Twain. A través de los ojos de sus personajes, el autor nos ofrece la visión de una doble realidad: la del mundo infantil, primitivo, que el lector adulto ya ha perdido, y la del mundo adulto, confuso e ilógico, asentado en unas convenciones que no resultan ser preferibles en ningún aspecto a los códigos de valor de un niño. Es esta una novela que no olvidará ningún lector joven y que acaso hará recordar y sonreír al adulto.",
+		"year" : 2005,
+		"pages" : 408,
+		"isbn" : "9788466745284",
+		"editorial" : "Anaya",
+		"edition" : 1,
+		"autor" : "Mark Twain",
+		"cover" : "book.png",
+		"category_id": 3
+	}
+]
