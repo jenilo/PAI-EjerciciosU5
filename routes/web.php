@@ -17,16 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/suma/{num1}/{num2}','WebController@suma');
-/*
-Route::get('/suma/{num1}/{num2}',function($num1,$num2){
-	echo "Suma: ".($num1 + $num2);
-})->where('num1','[0-9+]')->where('num2','[0-9+]');
-*/
-/*
-->where(array('num1'=>'[0-9]+', 'num2'=>'[0-9]+'));
-*/
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/books', 'BookController@index');
+Route::get('/categories', 'categoryController@index');
