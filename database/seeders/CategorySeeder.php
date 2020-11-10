@@ -36,7 +36,7 @@ class CategorySeeder extends Seeder
 
         $category = new Category();
         $category->name = "Ciencia ficción";
-        $category->description = "Libros de universos inimaginables";
+        $category->description = "Libros de ciencia ficción";
         $category->save();
     }
 }

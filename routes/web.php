@@ -21,5 +21,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/books', 'BookController@index');
-Route::get('/categories', 'categoryController@index');
+Route::group(['middleware' => ['auth']], function(){
+	Route::get('/books', 'BookController@index');
+	Route::get('/categories', 'categoryController@index')->name('categories');
+	Route::post('/categories','categoryController@store');
+});
+
