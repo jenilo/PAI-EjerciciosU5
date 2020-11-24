@@ -15,7 +15,6 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-
         return view('categories.index',compact('categories'));
     }
 
@@ -38,9 +37,9 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         if ($category = Category::create($request->all())) {
-            return redirect()->back()->with('success','Registro creado correctamente');
+            return redirect()->back();
         }
-        return redirect()->back()->with('error','Registro no creado.');
+        return redirect()->back();
     }
 
     /**
