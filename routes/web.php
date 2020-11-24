@@ -30,6 +30,3 @@ Route::group(['middleware' => ['auth']], function(){
 	Route::delete('/categories/{category}','categoryController@destroy');
 });
 
-Route::group(['middleware' => ['auth']], function(){
-	Route::get('/loans', 'WebController@index')->name('loans');
-});
