@@ -48,8 +48,10 @@
                         <x-jet-dropdown-link href="{{ route('profile.show') }}">
                             {{ __('Profile') }}
                         </x-jet-dropdown-link>
-                        <x-jet-dropdown-link href="{{ route('categories') }}">
-                            {{ __('Categories') }}
+                        @if (Auth::user()->hasPermissionTo('crud categories'))
+                            <x-jet-dropdown-link href="{{ route('categories') }}">
+                                {{ __('Categories') }}
+                        @endif
                         </x-jet-dropdown-link>
                         <x-jet-dropdown-link href="{{ url('books') }}">
                             {{ __('Books') }}

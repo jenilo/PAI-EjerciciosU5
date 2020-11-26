@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
+use Auth;
+
 class CategoryController extends Controller
 {
     /**
@@ -14,8 +16,14 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        return view('categories.index',compact('categories'));
+        if (Auth::user()->hasPermissionTo('crud categories')) {
+            $categories = Category::all();
+            return view('categories.index',compact('categories'));
+        }
+        else{
+            return redirect()->back()->with('error','No tiene permisos');
+        }
+       
     }
 
     /**
@@ -37,9 +45,9 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         if ($category = Category::create($request->all())) {
-            return redirect()->back();
+            return redirect()->back()->with('success','Registro creado correctamente');
         }
-        return redirect()->back();
+        return redirect()->back()->with('error','Registro no creado.');
     }
 
     /**

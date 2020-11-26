@@ -22,7 +22,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::group(['middleware' => ['auth']], function(){
-	Route::get('/books', 'BookController@index');
+	Route::get('/books', 'BookController@index')->middleware('permission:crud categories');
 	Route::post('/books', 'BookController@store');
 	Route::get('/categories', 'categoryController@index')->name('categories');
 	Route::post('/categories','categoryController@store');
